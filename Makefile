@@ -7,7 +7,7 @@ BIMSERVER_JARS = "$(BIMSERVER_PATH)org.eclipse.emf.common_2.9.1.v20130827-0309.j
 BIMserver-query-plugin-shell.jar: src/main/java/nz/ac/auckland/cs/*.java
 	mkdir -p built
 	javac -classpath "$(BIMSERVER_JARS)" -sourcepath ./src/main/java -d built src/main/java/nz/ac/auckland/cs/*.java
-	cp -R plugin/ built
+	cp -R plugin built
 	cd built && jar cf BIMserver-query-plugin-shell.jar * && cd ..
 	mv built/BIMserver-query-plugin-shell.jar BIMserver-query-plugin-shell.jar
 
